@@ -28,11 +28,11 @@ irm https://raw.githubusercontent.com/TheRealAshik/TheRealAshik/main/run.ps1 | i
 
 ## TUI Launcher Controls
 
-| Key         | Action              |
-|-------------|---------------------|
-| `↑` / `↓`  | Navigate scripts    |
-| `Enter`     | Run selected script |
-| `Q` / `Esc` | Quit                |
+| Key           | Action              |
+|---------------|---------------------|
+| `Up` / `Down` | Navigate scripts    |
+| `Enter`       | Run selected script |
+| `Q` / `Esc`   | Quit                |
 
 ---
 

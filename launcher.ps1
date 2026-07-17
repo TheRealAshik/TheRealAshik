@@ -28,11 +28,11 @@ $Scripts = @(
 function Write-Banner {
     Clear-Host
     $width = $Host.UI.RawUI.WindowSize.Width
-    $title = " TheRealAshik — Script Launcher "
+    $title = " TheRealAshik - Script Launcher "
     $pad   = [math]::Max(0, [math]::Floor(($width - $title.Length) / 2))
     Write-Host ""
     Write-Host (" " * $pad + $title) -ForegroundColor Cyan
-    Write-Host (" " * $pad + ("─" * $title.Length)) -ForegroundColor DarkCyan
+    Write-Host (" " * $pad + ("-" * $title.Length)) -ForegroundColor DarkCyan
     Write-Host ""
 }
 
@@ -42,7 +42,7 @@ function Write-Menu {
     for ($i = 0; $i -lt $Scripts.Count; $i++) {
         $s = $Scripts[$i]
         if ($i -eq $Selected) {
-            Write-Host "  ► " -NoNewline -ForegroundColor Yellow
+            Write-Host "  >> " -NoNewline -ForegroundColor Yellow
             Write-Host ("{0,-22}" -f $s.Name) -NoNewline -ForegroundColor Black -BackgroundColor Yellow
             Write-Host "  $($s.Desc)" -ForegroundColor DarkYellow
         } else {
@@ -53,7 +53,7 @@ function Write-Menu {
     }
 
     Write-Host ""
-    Write-Host "  [↑/↓] Navigate   [Enter] Run   [Q] Quit" -ForegroundColor DarkGray
+    Write-Host "  [Up/Down] Navigate   [Enter] Run   [Q] Quit" -ForegroundColor DarkGray
     Write-Host ""
 }
 
